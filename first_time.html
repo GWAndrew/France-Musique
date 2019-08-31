@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>FIRST TIME</title>
+    <link rel="stylesheet" href="first_time_style.css">
+    <script src="parallax.js"></script>
+</head>
+<body>
+    <script>require('./renderer.js');</script>
+    <script src="javascript_first_time.js"></script>
+    <div class="gradDynamic"></div>
+
+    <div class="container">
+        <ul id="scene">
+            <li class="layer" data-depth="0.5">
+                <p class="center">SÉLECTRIONEZ VOTRE RÉGION</p>
+            </li>
+        </ul>
+    </div>
+          
+    <div id="background_animation" class="container">
+        <ul id="boxes">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </div>
+    <script>
+            var scene = document.getElementById('scene');
+            var parallax = new Parallax(scene);
+    </script>
+</body>
+</html>

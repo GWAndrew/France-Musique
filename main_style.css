@@ -1,0 +1,49 @@
+body{
+  margin: 0px;
+}
+
+
+.center{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+
+
+
+#player{
+  width: 100%;
+  height: 50px;
+  background-color: #444444;
+  position: fixed;
+  bottom: 0;
+
+  left: 0;
+  right: 0;
+
+}
+
+
+#circle{
+  transition-duration: 200ms;
+  border-left: 36px;
+  border-right: 36px;
+  width: 36px;
+  height: 36px;
+  border-radius: 40px 40px;
+  border: 2px solid #1F5FF1;
+  margin-top: 5px;
+
+}
+
+#circle:hover{
+  transition-duration: 200ms;
+  border: 2px solid rgb(26, 49, 182);
+  width: 40px;
+  height: 40px;
+
+  margin-top: 3px;
+
+}

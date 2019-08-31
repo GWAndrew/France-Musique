@@ -1,0 +1,198 @@
+html {
+    min-height: 100%;
+}
+
+
+body{
+    overflow: hidden;
+    margin:0px;
+    padding:0px;
+    background: rgb(2,0,36);
+    background: linear-gradient(0deg, rgb(41, 41, 44) 0%, rgb(39, 39, 39) 100%);
+}
+
+
+.center{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+  }
+
+
+.gradDynamic {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: -1;
+}
+
+.gradDynamic:after, .gradDynamic:before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 400%;
+  height: 400%;
+  content: "";
+  z-index: -1;
+}
+
+.gradDynamic:after {
+  background: radial-gradient(circle, red, transparent);
+  animation: colorSpin 15s linear infinite;
+}
+
+.gradDynamic:before {
+  background-color: yellow;
+}
+
+@keyframes colorSpin {
+  25% {
+    transform: translateY(-75%);
+  }
+  50% {
+    transform: translate(-75%, -75%);
+  }
+  75% {
+    transform: translate(-75%, 0);
+  }
+  100% {
+    filter: hue-rotate(360deg);
+  }
+  /*75 is obtained as 100[1- (100/(height or width written in .gradDynamic:after)). i.e. 75 = 100[1-100/400] */
+}
+
+
+
+
+#background_animation{
+    width: 100%;
+    height: 100vh;
+}
+
+#main_text{
+  
+}
+
+#boxes {
+    position: absolute;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+
+}
+
+#boxes li{
+    position: absolute;
+    display: block;
+    list-style:none;
+    width:25px;
+    height:25px;
+    background:rgba(255,255,255,0.2);
+    animation:animate 20s linear infinite;
+    bottom:-150px;
+
+}
+
+#boxes li:nth-child(1){
+    left:86%;
+    width: 80px;
+    height:80px;
+    animation-delay:0s;
+    animation-duration: 20s;
+}
+
+#boxes li:nth-child(2){
+    left:16%;
+    width: 32px;
+    height:32px;
+    animation-delay:15s;
+    animation-duration: 11s;
+}
+
+
+#boxes li:nth-child(3){
+    left:67%;
+    width: 110px;
+    height:110px;
+    animation-delay:4s;
+    animation-duration: 25s;
+}
+
+
+#boxes li:nth-child(4){
+    left:50%;
+    width: 64px;
+    height:64px;
+    animation-delay:15s;
+    animation-duration: 14s;
+}
+
+
+#boxes li:nth-child(5){
+    left:65%;
+    width: 40px;
+    height:40px;
+    animation-delay:1s;
+    animation-duration: 12s;
+}
+#boxes li:nth-child(6){
+    left:10%;
+    width: 100px;
+    height:100px;
+    animation-delay:2s;
+    animation-duration: 23s;
+}
+
+
+#boxes li:nth-child(7){
+    left:30%;
+    width: 50px;
+    height:50px;
+    animation-delay:8s;
+    animation-duration: 12s;
+}
+
+#boxes li:nth-child(8){
+    left:50%;
+    width: 110px;
+    height:110px;
+    animation-delay:5s;
+    animation-duration: 21s;
+}
+
+
+#boxes li:nth-child(9){
+    left:80%;
+    width: 60px;
+    height:60px;
+    animation-delay:0s;
+    animation-duration: 13s;
+}
+
+
+#boxes li:nth-child(10){
+    left:20%;
+    width: 85px;
+    height:85px;
+    animation-delay:3s;
+}
+
+
+
+
+@keyframes animate{
+    0%{
+        transform: translateY(0) rotate(0deg);
+        opacity: 0.5;
+    }
+
+    100%{
+        transform: translateY(-800px) rotate(360deg);
+        opacity: 0;
+    }
+}
